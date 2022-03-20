@@ -3,9 +3,7 @@ namespace FizzBuzzWeb.Models
 {
     public class FizzBuzz
     {
-        public FizzBuzz()
-        {
-        }
+        public int Number { get; set; }
     }
 }
 
