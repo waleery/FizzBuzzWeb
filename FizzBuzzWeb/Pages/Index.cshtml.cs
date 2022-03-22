@@ -23,9 +23,15 @@ public class IndexModel : PageModel
     {
         if (!ModelState.IsValid)
         {
+            ViewData["Result"] = FizzBuzz.FizzBuzzCheck(FizzBuzz.Number);
+            return Page();
+        } else
+        {
+            ViewData["Result"] = FizzBuzz.FizzBuzzCheck(FizzBuzz.Number);
             return Page();
         }
-        return RedirectToPage("./Privacy");
+
+        
     }
 
     public void OnGet()
