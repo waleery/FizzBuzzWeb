@@ -18,7 +18,7 @@ namespace FizzBuzzWeb.Models
             }
             else if (number % 5 == 0)
             {
-                return "Buzz";
+                return "Buzzz";
             }
             else if ( number % 3 == 0)
             {
