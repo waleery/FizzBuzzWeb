@@ -26,6 +26,7 @@ public class IndexModel : PageModel
         if (!ModelState.IsValid)
         {
             ViewData["Result"] = FizzBuzz.FizzBuzzCheck(FizzBuzz.Number);
+
             return Page();
         } else
         {
