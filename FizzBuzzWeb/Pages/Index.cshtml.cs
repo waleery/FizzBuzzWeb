@@ -29,6 +29,7 @@ public class IndexModel : PageModel
 
             return Page();
         } else
+
         {
             HttpContext.Session.SetString("Data", JsonConvert.SerializeObject(FizzBuzz));
             //return RedirectToPage("./SavedInSession");

@@ -10,6 +10,7 @@ namespace FizzBuzzWeb.Models
 
         public int? Number { get; set; }
 
+
         public string FizzBuzzCheck(int? number)
         {
             if (number % 3 == 0 && number % 5 == 0) {
