@@ -1,6 +1,8 @@
 ﻿using FizzBuzzWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 
 namespace FizzBuzzWeb.Pages;
 
@@ -27,6 +29,9 @@ public class IndexModel : PageModel
             return Page();
         } else
         {
+            HttpContext.Session.SetString("Data", JsonConvert.SerializeObject(FizzBuzz));
+            //return RedirectToPage("./SavedInSession");
+
             ViewData["Result"] = FizzBuzz.FizzBuzzCheck(FizzBuzz.Number);
             return Page();
         }
