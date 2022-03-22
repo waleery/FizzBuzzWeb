@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FizzBuzzWeb.Pages
 {
-    public class SavedInSession1Model : PageModel
+    public class SavedInSessionModel : PageModel
     {
         public void OnGet()
         {
