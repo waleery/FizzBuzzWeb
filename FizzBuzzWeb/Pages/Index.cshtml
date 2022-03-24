@@ -5,16 +5,19 @@
     ViewData["Title"] = "Fizz Buzz";
 }
 <div class="text-center">
-    <h1 class="display-4">Welcome @Model.Name</h1>
+    <h1 class="display-4">Welcome</h1>
     <form method="post">
-        <div class="form-group" >
-            <label asp-for="FizzBuzz.Number" style="float: left;">Twój szczęśliwy numerek</label><br/>
-            <input asp-for="FizzBuzz.Number" style="float: left;"/>
+        <div class="form-group">
+            <label asp-for="FizzBuzz.Number" style="float: left;">Twój szczęśliwy numerek</label><br />
+            <input asp-for="FizzBuzz.Number" style="float: left;" />
             <br />
-        
+
             <button type="submit" class="btn btn-primary" style="margin-top:10px; margin-bottom:10px; display:flex;">Zatwierdź</button>
-         
-            <div class="alert alert-success" style="text-align:left"> @ViewData["Result"]</div>
+
+            @if (ViewData["Result"] != null)
+            {
+                <div class="alert alert-success" style="text-align:left"> @ViewData["Result"]</div>
+            }
             <span asp-validation-for="FizzBuzz.Number" class="text-danger"></span>
         </div>
 
